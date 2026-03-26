@@ -21,8 +21,7 @@ type
     btnacessar: TButton;
   private
     { Private declarations }
-    jsnobj: TJSONObject; // jsonencode - PHP
-    procedure geraJSON();
+    jsnobj : TJSONObject;
   public
     { Public declarations }
   end;
@@ -35,19 +34,5 @@ implementation
 {$R *.fmx}
 
 uses umodulo;
-
-{ Tfrmacesso }
-
-procedure Tfrmacesso.geraJSON;
-begin
-  try
-    jsnobj := TJSONObject.Create;
-    jsnobj.AddPair('usuario', edtusuario.Text);
-    jsnobj.AddPair('senha', edtsenha.Text);
-    //{"usuario":"valor","senha":"valor"}
-  finally
-
-  end;
-end;
 
 end.

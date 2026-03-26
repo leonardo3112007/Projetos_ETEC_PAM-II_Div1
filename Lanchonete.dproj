@@ -231,6 +231,10 @@
             <Form>frmlistausuarios</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="uwebview.pas">
+            <Form>frmwebview</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

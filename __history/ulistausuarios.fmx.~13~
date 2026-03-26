@@ -4,9 +4,11 @@ object frmlistausuarios: Tfrmlistausuarios
   Caption = 'Form1'
   ClientHeight = 480
   ClientWidth = 640
+  Position = ScreenCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnShow = FormShow
   DesignerMasterStyle = 0
   object Layout1: TLayout
     Align = Client
@@ -50,6 +52,7 @@ object frmlistausuarios: Tfrmlistausuarios
         TabOrder = 1
         Text = 'Button2'
         TextSettings.Trimming = None
+        OnClick = Button2Click
       end
     end
     object Layout3: TLayout
@@ -82,7 +85,7 @@ object frmlistausuarios: Tfrmlistausuarios
     end
   end
   object BindSourceDB1: TBindSourceDB
-    DataSet = dm.usuario
+    DataSet = dm.usuarios
     ScopeMappings = <>
     Left = 304
     Top = 224

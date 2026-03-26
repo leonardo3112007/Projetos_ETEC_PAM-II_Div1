@@ -1,13 +1,14 @@
-object frmacesso: Tfrmacesso
+object frmiuusuario: Tfrmiuusuario
   Left = 0
   Top = 0
-  Caption = 'Acesso ao Sistema'
+  Caption = 'Cadastro e Altera'#231#227'o'
   ClientHeight = 480
   ClientWidth = 640
   Position = ScreenCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnShow = FormShow
   DesignerMasterStyle = 0
   object Layout1: TLayout
     Align = Client
@@ -25,17 +26,26 @@ object frmacesso: Tfrmacesso
     TabOrder = 0
     object Layout2: TLayout
       Align = Top
+      Padding.Left = 2.000000000000000000
+      Padding.Top = 2.000000000000000000
+      Padding.Right = 2.000000000000000000
+      Padding.Bottom = 2.000000000000000000
       Position.X = 2.000000000000000000
       Position.Y = 2.000000000000000000
       Size.Width = 630.000000000000000000
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
-      object Image1: TImage
-        MultiResBitmap = <
-          item
-          end>
-        Align = Center
+      object edtusunome: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Client
+        TabOrder = 0
+        TextSettings.HorzAlign = Center
+        Size.Width = 626.000000000000000000
+        Size.Height = 46.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'DIGITE SEU NOME COMPLETO'
+        CharCase = ecUpperCase
       end
     end
     object Layout3: TLayout
@@ -50,7 +60,7 @@ object frmacesso: Tfrmacesso
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
-      object edtusuario: TEdit
+      object edtusulogin: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Align = Client
         TabOrder = 0
@@ -58,28 +68,31 @@ object frmacesso: Tfrmacesso
         Size.Width = 626.000000000000000000
         Size.Height = 46.000000000000000000
         Size.PlatformDefault = False
-        TextPrompt = 'USU'#193'RIO:'
+        TextPrompt = 'DIGITE O SEU USU'#193'RIO'
         CharCase = ecUpperCase
       end
     end
     object Layout4: TLayout
       Align = Top
+      Padding.Left = 2.000000000000000000
+      Padding.Top = 2.000000000000000000
+      Padding.Right = 2.000000000000000000
+      Padding.Bottom = 2.000000000000000000
       Position.X = 2.000000000000000000
       Position.Y = 102.000000000000000000
       Size.Width = 630.000000000000000000
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
-      object edtsenha: TEdit
+      object edtususenha: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Align = Client
         TabOrder = 0
-        Password = True
         TextSettings.HorzAlign = Center
-        Size.Width = 630.000000000000000000
-        Size.Height = 50.000000000000000000
+        Size.Width = 626.000000000000000000
+        Size.Height = 46.000000000000000000
         Size.PlatformDefault = False
-        TextPrompt = 'SENHA:'
+        TextPrompt = 'DIGITE A SUA SENHA'
         CharCase = ecUpperCase
       end
     end
@@ -91,11 +104,12 @@ object frmacesso: Tfrmacesso
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 3
-      object btnacessar: TButton
+      object btngravar: TButton
         Align = Center
         TabOrder = 0
-        Text = 'ACESSAR'
+        Text = 'GRAVAR'
         TextSettings.Trimming = None
+        OnClick = btngravarClick
       end
     end
   end

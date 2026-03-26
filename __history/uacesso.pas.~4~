@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes,
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
-  FMX.Controls.Presentation, FMX.Edit, FMX.Objects, FMX.StdCtrls, System.JSON;
+  FMX.Controls.Presentation, FMX.Edit, FMX.Objects, FMX.StdCtrls;
 
 type
   Tfrmacesso = class(TForm)
@@ -21,8 +21,6 @@ type
     btnacessar: TButton;
   private
     { Private declarations }
-    jsnobj: TJSONObject; // jsonencode - PHP
-    procedure geraJSON();
   public
     { Public declarations }
   end;
@@ -35,19 +33,5 @@ implementation
 {$R *.fmx}
 
 uses umodulo;
-
-{ Tfrmacesso }
-
-procedure Tfrmacesso.geraJSON;
-begin
-  try
-    jsnobj := TJSONObject.Create;
-    jsnobj.AddPair('usuario', edtusuario.Text);
-    jsnobj.AddPair('senha', edtsenha.Text);
-    //{"usuario":"valor","senha":"valor"}
-  finally
-
-  end;
-end;
 
 end.

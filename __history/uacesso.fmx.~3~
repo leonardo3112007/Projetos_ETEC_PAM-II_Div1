@@ -94,7 +94,7 @@ object frmacesso: Tfrmacesso
       object btnacessar: TButton
         Align = Center
         TabOrder = 0
-        Text = 'ACESSAR'
+        Text = 'btnacessar'
         TextSettings.Trimming = None
       end
     end
